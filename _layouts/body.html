@@ -16,6 +16,7 @@ a,a:hover{text-decoration: none;}
 .content-right-footer{text-align: right;}
 .btn-right{float:right;margin-right:5%;}
 .btn-left{float:left;margin-left:2%;}
+.btn-center{margin-left: 130px;}
 .footer-end{text-align: center;color: #fff;line-height: 45px}
     </style>
   </head>
@@ -36,7 +37,7 @@ a,a:hover{text-decoration: none;}
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav">
-		        <li class="active"><a href="{{site.baseurl}}index.html">首页<span class="sr-only">(current)</span></a></li>
+		        <li class="active"><a href="{{site.baseurl}}/index.html">首页<span class="sr-only">(current)</span></a></li>
 		        <li><a href="#">随笔</a></li>
 		        <li><a href="#">笔记</a></li>
 		        <li><a href="#">项目</a></li>
@@ -81,19 +82,9 @@ a,a:hover{text-decoration: none;}
 	</div>
 	<div class="content-right">
 		{{content}}
+		
 	</div>
 	<!--content-->
-	{% if page.previous %}
-    	<a class="btn btn-primary btn-left" href="{{site.baseurl}}/{{page.previous.url}}">上一篇： {{page.previous.title}}</a>
-    	{% else %}
-    	<a class="btn btn-primary btn-left" href="{{site.baseurl}}/index.html">返回首页</a>
-  	{% endif %}
-
- 	{% if page.next %}
-    	<a class="btn btn-primary btn-right" href="{{site.baseurl}}/{{page.next.url}}">下一篇： {{page.next.title}}</a>
-    	{% else %}
-    	<a class="btn btn-primary btn-right" href="{{site.baseurl}}/index.html">返回首页</a>
- 	{% endif %}
 	<!--footer-->
 	<footer class="navbar navbar-inverse navbar-fixed-bottom">
 	  <div class="footer-end">© 2008-2019 Alex个人博客</div>

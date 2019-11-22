@@ -1,0 +1,22 @@
+---
+layout: body
+---
+<div class="panel panel-default">
+		<div class="panel-heading">{{ page.type }} </div>
+	  	<div class="panel-body content-right-body">
+	  		{{ page.contens }}
+		</div>
+  	<div class="panel-footer content-right-footer">[{{ page.date }}]</div>
+</div>
+<!--分页-->
+	{% if page.previous %}
+	<a class="btn btn-primary btn-left" href="{{site.baseurl}}/{{page.previous.url}}">上一篇： {{page.previous.title}}</a>
+		{% else %}
+	<a class="btn btn-primary btn-left" href="{{site.baseurl}}/index.html">返回首页</a>
+	{% endif %}
+	{% if page.next %}
+	<a class="btn btn-primary btn-right" href="{{site.baseurl}}/{{page.previous_page_path}}">下一篇： {{page.next.title}}</a>
+		{% else %}
+	<a class="btn btn-primary btn-right" href="{{site.baseurl}}/index.html">返回首页</a>
+	{% endif %}
+<!--分页-->

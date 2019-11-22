@@ -1,2 +1,6 @@
 baseurl: /Alex-join.github.io
 author: alex
+
+#分页配置
+paginate: 3
+plugins: [jekyll-paginate]

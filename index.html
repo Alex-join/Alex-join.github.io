@@ -4,7 +4,7 @@ title: 科学家的成果是全人类的财产，而科学是最无私的领域�
 author: 高尔基
 ---
 
-{% for post in site.posts %}
+{% for post in paginator.posts %}
 	<div class="panel panel-default">
   		<div class="panel-heading">{{ post.type }}</div>
 	  	<div class="panel-body content-right-body">
@@ -15,4 +15,16 @@ author: 高尔基
 	  	<div class="panel-footer content-right-footer">[{{ post.date }}]</div>
 	</div>
 {% endfor %}
-
+<!--分页-->
+{% if paginator.previous_page_path != nil %}
+	<a class="btn btn-primary btn-left" href="{{site.baseurl}}{{paginator.previous_page_path}}">上一页</a>
+	{% else %}
+	<a class="btn btn-primary btn-left" href="{{site.baseurl}}/index.html">返回首页</a>
+	{% endif %}
+	<a class="btn btn-primary btn-center">当前位置：{{paginator.page}}页</a>
+	{% if paginator.next_page_path != nil %}
+	<a class="btn btn-primary btn-right" href="{{site.baseurl}}{{paginator.next_page_path}}">下一页</a>
+	{% else %}
+	<a class="btn btn-primary btn-right" href="{{site.baseurl}}/index.html">返回首页</a>
+{% endif %}
+<!--分页-->
