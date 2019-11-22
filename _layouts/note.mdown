@@ -1,0 +1,10 @@
+---
+layout: body
+---
+<div class="panel panel-default">
+		<div class="panel-heading">{{ page.type }} </div>
+	  	<div class="panel-body content-right-body">
+	  		{{ page.contens }}
+		</div>
+  	<div class="panel-footer content-right-footer">[{{ page.date }}]</div>
+</div>
